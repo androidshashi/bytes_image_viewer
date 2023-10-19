@@ -11,31 +11,27 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+This is a very simple widget.
+You can use it when: Your GET IMAGE API returns Uint8List.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+No need to write api calling and then pass the result to any other image viewer.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+please find the example here `/example`.
 
 ```dart
 CustomImageViewer(
-fit: BoxFit.cover,
+height:100, //optional
+width:100,//optional
+fit: BoxFit.cover,//optional
 apiUrl:'image url',
 headers: {
 "Authorization":
 "Bearer yTiIsInN1YiI6IjEiLC"
-},
+}, //optional
 loadingWidget: CircularProgressIndicator(
 color: Colors.red,
 )
@@ -43,5 +39,7 @@ color: Colors.red,
 ```
 
 ## Additional information
+
+Will be updated soon.
 
 
