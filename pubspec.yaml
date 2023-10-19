@@ -1,7 +1,7 @@
 name: bytes_image_viewer
 description: This image viewer, takes the url which returns the bytes as image. You can implement it with autherization factor.
 version: 0.0.1
-homepage:
+homepage: https://github.com/androidshashi/bytes_image_viewer
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
