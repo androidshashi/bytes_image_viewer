@@ -12,13 +12,15 @@ class BytesImageViewer extends StatefulWidget {
       required this.apiUrl,
       required this.headers,
       required this.loadingWidget,
+      required this.errorWidget,
       this.height,
       this.width,
       this.fit})
       : super(key: key);
   final String apiUrl;
   final Map<String, String> headers;
-  final Widget loadingWidget;
+  final Widget? loadingWidget;
+  final Widget? errorWidget;
   final double? height;
   final double? width;
   final BoxFit? fit;
@@ -29,6 +31,7 @@ class BytesImageViewer extends StatefulWidget {
 
 class _BytesImageViewerState extends State<BytesImageViewer> {
   Uint8List? imageData;
+  bool hasError = false;
 
   @override
   void initState() {
@@ -39,13 +42,15 @@ class _BytesImageViewerState extends State<BytesImageViewer> {
   @override
   Widget build(BuildContext context) {
     return imageData == null
-        ? widget.loadingWidget
-        : Image.memory(
-            imageData!,
-            height: widget.height ?? 100,
-            width: widget.width ?? 100,
-            fit: widget.fit,
-          );
+        ? (widget.loadingWidget ?? const CircularProgressIndicator())
+        : hasError
+            ? (widget.errorWidget ?? const SizedBox())
+            : (Image.memory(
+                imageData!,
+                height: widget.height ?? 100,
+                width: widget.width ?? 100,
+                fit: widget.fit,
+              ));
   }
 
   Future<void> _callApi() async {
@@ -57,7 +62,11 @@ class _BytesImageViewerState extends State<BytesImageViewer> {
         imageData = response.bodyBytes;
       });
     } else {
-      log('Failed response: ${response.statusCode}. ${response.headers.toString()}. ${response.request?.headers.toString()}.');
+      setState(() {
+        hasError = true;
+      });
+
+      log('################################\nBYTES IMAGE VIEWER\nRequest URL::${response.request?.url}\nResponse status code::${response.statusCode}\n################################');
     }
   }
 }

@@ -34,7 +34,10 @@ headers: {
 }, //optional
 loadingWidget: CircularProgressIndicator(
 color: Colors.red,
-)
+),//optional
+errorWidget: CircularProgressIndicator(
+color: Colors.red,
+),//optional
     );
 ```
 
