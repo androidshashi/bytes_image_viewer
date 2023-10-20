@@ -23,7 +23,7 @@ No need to write api calling and then pass the result to any other image viewer.
 please find the example here `/example`.
 
 ```dart
-CustomImageViewer(
+BytesImageViewer(
 height:100, //optional
 width:100,//optional
 fit: BoxFit.cover,//optional

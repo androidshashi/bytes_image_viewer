@@ -6,8 +6,8 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class CustomImageViewer extends StatefulWidget {
-  const CustomImageViewer(
+class BytesImageViewer extends StatefulWidget {
+  const BytesImageViewer(
       {Key? key,
       required this.apiUrl,
       required this.headers,
@@ -24,10 +24,10 @@ class CustomImageViewer extends StatefulWidget {
   final BoxFit? fit;
 
   @override
-  State<CustomImageViewer> createState() => _CustomImageViewerState();
+  State<BytesImageViewer> createState() => _BytesImageViewerState();
 }
 
-class _CustomImageViewerState extends State<CustomImageViewer> {
+class _BytesImageViewerState extends State<BytesImageViewer> {
   Uint8List? imageData;
 
   @override
