@@ -24,21 +24,21 @@ please find the example here `/example`.
 
 ```dart
 BytesImageViewer(
-height:100, //optional
-width:100,//optional
-fit: BoxFit.cover,//optional
-apiUrl:'image url',
-headers: {
-"Authorization":
-"Bearer yTiIsInN1YiI6IjEiLC"
-}, //optional
-loadingWidget: CircularProgressIndicator(
-color: Colors.red,
-),//optional
-errorWidget: CircularProgressIndicator(
-color: Colors.red,
-),//optional
-    );
+    height:100, //optional
+    width:100,//optional
+    fit: BoxFit.cover,//optional
+    apiUrl:'image url',
+    headers: {
+            "Authorization":
+            "Bearer yTiIsInN1YiI6IjEiLC"
+    }, //optional
+    loadingWidget: CircularProgressIndicator(
+        color: Colors.red,
+    ),//optional
+    errorWidget: CircularProgressIndicator(
+                    color: Colors.red,
+    ),//optional
+);
 ```
 
 ## Additional information
