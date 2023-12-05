@@ -24,25 +24,38 @@ please find the example here `/example`.
 
 ```dart
 BytesImageViewer(
-height:100, //optional
-width:100,//optional
-fit: BoxFit.cover,//optional
-apiUrl:'image url',
-headers: {
-"Authorization":
-"Bearer yTiIsInN1YiI6IjEiLC"
-}, //optional
-loadingWidget: CircularProgressIndicator(
-color: Colors.red,
-),//optional
-errorWidget: CircularProgressIndicator(
-color: Colors.red,
-),//optional
-    );
+  height:100, //optional
+  width:100,//optional
+  fit: BoxFit.cover,//optional
+  apiUrl:'image url',
+  headers: {
+    "Authorization":
+    "Bearer yTiIsInN1YiI6IjEiLC"
+  }, //optional
+  loadingWidget: CircularProgressIndicator(
+          color: Colors.red,
+      ),//optional
+  errorWidget: CircularProgressIndicator(
+          color: Colors.red,
+      ),//optional
+);
 ```
 
 ## Additional information
 
-Will be updated soon.
+BytesImageViewer : A widget that shows your image from the network image url(That returns Uint8List). 
+
+height : Height of the image view 
+
+width : Width of the image view
+
+headers : You can provide any kind of header information for eg authorization token, content-type etc. (You can use this if you image requires any kind of authorization).
+
+loadingWidget : This widget is shown during the image is being downloaded from the network. You can consider it as a placeholder.
+
+errorWidget: This widget shows when any error occurred. And BytesImageViewer is unable to show the image from the network url.
+
+
+
 
 

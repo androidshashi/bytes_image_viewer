@@ -65,7 +65,6 @@ class _BytesImageViewerState extends State<BytesImageViewer> {
       setState(() {
         hasError = true;
       });
-
       log('################################\nBYTES IMAGE VIEWER\nRequest URL::${response.request?.url}\nResponse status code::${response.statusCode}\n################################');
     }
   }
