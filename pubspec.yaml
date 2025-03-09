@@ -1,6 +1,6 @@
 name: bytes_image_viewer
-description: This image viewer, takes the url which returns the bytes as image. You can implement it with autherization factor.
-version: 0.0.3
+description: This image viewer, takes the url which returns the bytes as image. You can implement it with authorization factor.
+version: 0.0.4
 homepage: https://github.com/androidshashi/bytes_image_viewer
 
 environment:
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.1.0
+  http: ^1.3.0
 # Add the depend_on_referenced_packages field here
 depend_on_referenced_packages: true
 
